@@ -5,10 +5,17 @@
     .subscribe-button {
         background-color: rgb(200, 0, 0); /* button color */
         color: white; /* text color */
+        
+        /* color value can be color name, rgb value, or hex value! */
+
         height: 36px; 
         width: 105px; /* button size */
+
+        /* height and width can be absolute values or relative values */
+
         border: none; /* no border! */
         border-radius: 5px; /* rounded corner */
+
         cursor: pointer; /* mouse becomes a small hand when it is over the button */
         margin-right: 8px; /* distance between this button and its right element*/
     }
@@ -16,31 +23,41 @@
     .join-button {
         background-color: white;
         color: rgb(41, 118, 211);
+
         height: 36px;
         width: 62px;
-        border-color: rgb(41, 118, 211);
-        border-style: solid; /* border color is solid and has no shadow！ */
+
         border-width: 1px; /* thickness of border */
+        border-style: solid; /* border color is solid and has no shadow！ */
+        border-color: rgb(41, 118, 211);
+        
+        /* The above three can be combined as border: 1px solid rgb(41, 118, 211); */
+
+        /* border: 1px solid rgb(41, 118, 211); */
         border-radius: 5px;
+
         cursor: pointer;
     }
 
     .tweet-button {
         background-color: rgb(2, 158, 255);
         color: white;
-        height: 36px;
-        width: 74px;
-        border: none;
-        border-radius: 18px; /* 1/2 * height to make semi-circle! */
+
         font-size: 15px; /* size of the text inside the button */
         font-weight: bold;
+
+        height: 36px;
+        width: 74px;
+
+        border: none;
+        border-radius: 18px; /* 1/2 * height to make semi-circle! */
+
         cursor: pointer;
         margin-left: 8px;
     }
 
 </style>
 
-<!-- https://supersimple.dev/exercises/buttons -->
 <button class="subscribe-button">SUBSCRIBE</button>
 <button class="join-button">JOIN</button>
 <button class="tweet-button">Tweet</button>
