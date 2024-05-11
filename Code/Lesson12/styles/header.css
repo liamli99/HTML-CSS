@@ -1,0 +1,31 @@
+.header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-section {
+    background-color: lightblue;
+    width: 150px;
+}
+
+/* The left and right section has fixed width, but the middle section resizes when resizing the window! Thus we should use a relative unit, 1 fr in grid and flex: 1 in flexbox! However, this section has a max-width which means that when it reaches that width when enlarging the window, it stops streching! Thus we should also set a max-width! */
+
+/* Note that when the window is small, there should be a short distance between the middle-section and the left and right sections! Thus we should set margin-left and margin-right!  */
+.middle-section {
+    background-color: lightpink;
+    flex: 1;
+    max-width: 500px;
+    margin-left: 70px;
+    margin-right: 35px; 
+}
+
+.right-section {
+    background-color: lightblue;
+    width: 200px;
+}
+
+.search-bar {
+    display: block;
+ }

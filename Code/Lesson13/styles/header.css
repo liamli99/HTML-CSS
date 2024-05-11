@@ -1,0 +1,100 @@
+.header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.left-section {
+    /* We can delete width: 500px because left section has two images which have fixed width! So that its width can be automatically set! */
+
+    /* Nested flexbox! */
+    display: flex;
+    align-items: center;
+}
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+.youtube-logo {
+    height: 20px;
+}
+
+
+.middle-section {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 70px;
+    margin-right: 35px; 
+
+    /* Nested flexbox! */
+    display: flex;
+    align-items: center;
+}
+.search-bar {
+    height: 36px;
+    flex: 1;
+    padding-left: 10px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    /* inset will make the shadow inside */
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+
+    /* Since flex: 1, search-bar resizes when resizing the window. Note that it stops expanding because middle-section has max-width and stops shrinking because input has default width! We want it to shrink as much as possible!  */ 
+    width: 0px;
+}
+.search-bar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+.search-button {
+    height: 40px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+.search-icon {
+    height: 25px;
+    margin-top: 4px;
+}
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+}
+.voice-search-icon {
+    height: 24px;
+    margin-top: 4px;
+}
+
+
+.right-section {
+    /* We shouldn't delete this width like left-section because we are not using margin to set the distance! Instead, we use justify-content: space-between, so we have to set a fixed width! If not, since header container has justify-content: space-between, right-section lies on the right and only takes up the space 4 images need, thus here justify-content doesn't work!  */
+    width: 180px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* We want the width of right-section to keep 180px and stop resizing when resizing the window!  */
+    flex-shrink: 0;
+}
+.upload-icon {
+    height: 24px;
+}
+.youtube-apps-icon {
+    height: 24px;
+}
+.notifications-icon {
+    height: 24px;
+}
+.current-user-picture {
+    height: 32px;
+    border-radius: 16px;
+}

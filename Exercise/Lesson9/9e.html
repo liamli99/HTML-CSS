@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twitter Textbox</title>
+        <style>
+            div {
+                width: 450px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                padding: 12px;
+                border-radius: 5px;
+            }
+
+            .cat {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 25px;
+                /* align the middle of each element with the middle of the line */
+                vertical-align: middle;
+            }
+
+            input {
+                width: 300px;
+                border: none;
+                font-size: 18px;
+                vertical-align: middle;
+            }
+            
+            button {
+                background-color: rgb(29, 155, 240);
+                color: white;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 16px; 
+                font-size: 16px; 
+                font-weight: bold;
+                cursor: pointer;
+                vertical-align: middle;
+        
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img class="cat" src="cat.jpeg">
+            <input placeholder="What's happening?">
+            <button>Tweet</button>
+        </div>
+    </body>
+</html>

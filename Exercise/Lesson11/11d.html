@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>11d</title>
+        <style>
+            p {
+                font-family: Arial;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 200px 200px 200px;
+                column-gap: 15px;
+            }
+
+            .profile {
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .profile-picture {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 12px;
+            }
+
+            .name {
+                font-size: 18px;
+                font-weight: bold;
+                margin-left: 8px;
+                margin-bottom: 4px;
+            }
+
+            .friend-row {
+                margin-left: 8px;
+                margin-bottom: 10px;
+                display: grid;
+                grid-template-columns: 28px 1fr;
+                column-gap: 4px;
+                /* Similar to "vertical-align: middle;" */
+                align-items: center;
+            }
+
+            .friend-picture {
+                height: 28px;
+                width: 28px;
+                object-fit: cover;
+                border-radius: 14px;
+            }
+
+            .friend {
+               color: grey; 
+            }
+
+            .add {
+                background-color: rgb(24, 119, 242);
+                color: white;
+                border: none;
+                border-radius: 4px;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-left: 8px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="profile">
+                <img class="profile-picture" src="cat.jpeg">
+                <p class="name">Oliver</p>
+                <div class="friend-row">
+                    <!-- Note that we don't have to use <div></div> inside CSS grid! If grid defines several sections and one of them only has one element, e.g. <img>, <p>, <input>, <button>, we can simply use that one element without wrapping it inside a div! <div> only help us wrap several elements into one section!!!  -->
+                    <img class="friend-picture" src="cat.jpeg">
+                    <p class="friend">2 mutual friends</p>
+                </div>
+                <button class="add">Add Friend</button>
+            </div>
+    
+            <div class="profile">
+                <img class="profile-picture" src="cat.jpeg">
+                <p class="name">Mimi</p>
+                <div class="friend-row">
+                    <img class="friend-picture" src="cat.jpeg">
+                    <p class="friend">3 mutual friends</p>
+                </div>
+                <button class="add">Add Friend</button>
+            </div>
+    
+            <div class="profile">
+                <img class="profile-picture" src="cat.jpeg">
+                <p class="name">Rex</p>
+                <div class="friend-row">
+                    <img class="friend-picture" src="cat.jpeg">
+                    <p class="friend">4 mutual friends</p>
+                </div>
+                <button class="add">Add Friend</button>
+            </div>
+        </div>
+    </body>
+</html>

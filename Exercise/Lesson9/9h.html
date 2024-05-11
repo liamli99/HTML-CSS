@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Search</title>
+        <style>
+            div {
+                text-align: center;
+            }
+
+            .google {
+                width: 200px;
+                /* google-logo is inside <div></div>, the box model of this logo having margin-bottom is different from this div having margin-bottom! But they look the same! You can have a try! */
+                margin-bottom: 10px;
+            }
+
+            .text-input {
+                font-size: 16px;
+                width: 500px;
+                border: none;
+                border-radius: 30px;
+                padding: 12px 15px;
+                box-shadow: 0px 1px 5px rgb(0, 0, 0, 0.25);
+                /* this input is inside <div></div>, the box model of this input having margin-bottom is different from this div having margin-bottom! But they look the same! */
+                margin-bottom: 30px;
+            }
+
+            button {
+                background-color: rgb(245, 245, 245);
+                border: none;
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+
+            .button1 {
+                margin-right: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <img class="google" src="google-logo.png">
+         </div>
+        
+        <div>
+            <input class="text-input" placeholder="Search Google or type a url">
+        </div>
+
+        <div>
+            <button class="button1">Google Search</button>
+            <button>I'm Feeling Lucky</button>
+        </div>
+    </body>
+</html>

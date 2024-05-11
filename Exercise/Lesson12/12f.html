@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12f</title>
+        <style>
+            .header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(120, 82, 178);
+                padding-left: 15px;
+                padding-right: 15px;
+
+                /* We don't have to set the header height first because this may cause some restrictions! We can set the height, padding, border, and margin of its inner element to automatically set the header height!!! */
+            }
+
+            .left-text {
+                font-family: Arial;
+                font-weight: bold;
+                color: white;
+            }
+
+            .middle-input {
+                width: 500px;
+                height: 30px;
+                border: none;
+                border-radius: 15px;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                padding-left: 20px;
+            }
+
+            .right-button {
+                background-color: rgb(120, 82, 178);
+                color: white;
+                border: 1px solid white;
+                border-radius: 2px;
+                padding: 8px 15px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <!-- Note that we don't have to use <div></div> inside flexbox! If flexbox container defines flex-direction: row, and one element takes up the entire column/section, then we can simply use that one element without wrapping it inside a div! <div> only help us wrap several elements into one column/section!!!  -->
+            <div class="left-text">Home</div>
+            <input class="middle-input" placeholder="Search">
+            <button class="right-button">Download</button>
+        </div>
+    </body>
+</html>
