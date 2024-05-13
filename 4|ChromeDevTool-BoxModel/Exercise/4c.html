@@ -2,14 +2,23 @@
 button {
     background-color: rgb(46, 164, 79);
     color: white;
-    height: 40px;
-    width: 90px;
-    border: none;
-    border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
-    cursor: pointer;
+    
+    /* 
+    height: 40px;
+    width: 90px; 
 
+    padding-top/bottom: (40-17)/2
+    padding-left/right: (90-55)/2 
+
+    However, to simplify the question, we are not setting the exact same height and width as the previous one!
+    */
+    padding: 11px 17px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     transition: box-shadow 0.15s;
 }
 

@@ -2,34 +2,51 @@
 .start-button {
     background-color: rgb(121, 82, 179);
     color: white;
+    font-weight: bold;
+    
+    /* 
     height: 40px;
-    width: 110px;
+    width: 110px; 
+
+    padding-top/bottom: (40-15.5)/2
+    padding-left/right: (110-70.4)/2 
+
+    However, to simplify the question, we are not setting the exact same height and width as the previous one!
+    */
+    padding: 12px 20px;
+
     border: none;
     border-radius: 5px;
-    font-weight: bold;
     cursor: pointer;
     margin-right: 8px;
-
     transition: background-color 0.15s;
 }
 
 .start-button:hover {
-    /* Since this is a darker color, we cannot use opacity! */
     background-color: rgb(99, 60, 156);
 }
 
 .download-button {
     background-color: white;
     color: rgb(108, 117, 125);
-    height: 40px;
-    width: 100px;
-    border-color: rgb(108, 117, 125);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
     font-weight: bold;
-    cursor: pointer;
+    
+    /* 
+    height: 40px;
+    width: 100px; 
 
+    This button has border!
+
+    padding-top/bottom: (40-15.5-2)/2
+    padding-left/right: (100-63.7-2)/2 
+
+    However, to simplify the question, we are not setting the exact same height and width as the previous one!
+    */
+    padding: 11px 17px;
+
+    border: 1px solid rgb(108, 117, 125);
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.15s, color 0.15s;
 }
 

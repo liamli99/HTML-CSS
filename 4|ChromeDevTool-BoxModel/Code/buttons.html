@@ -3,7 +3,7 @@
 <!-- Internal CSS -->
 <style>
     .subscribe-button {
-        /* Homework 4g */
+        /* See Homework 4g */
         background-color: rgb(200, 0, 0); 
         color: white; 
         
@@ -11,7 +11,7 @@
         height: 36px; 
         width: 105px;  
         
-        It is not a good idea to set the dimension of the button since it may cause multiple lines if there are many characters inside the button! We can set the padding instead!!! 
+        It is not a good idea to set the dimension of the button since it may cause multiple lines if there are many characters inside the button! We can set the padding instead, so that the dimension of the button is not fixed!!! 
         
         Remember that in button, width = content width + padding & border. To simplify the question, we are not setting the exact same height and width as the previous one!
         */
@@ -42,15 +42,11 @@
         height: 36px;
         width: 62px; 
         
-        padding-top -1 and padding-bottom -1 because this button has border! 
-        
-        We only want this button to have the same height as subscribe-button so we don't change padding-left and padding-right!
+        Different from subscribe button, here padding - 1 because join button has borders!
         */
-        padding: 9px 16px;
+        padding: 9px 15px;
 
-        border-color: rgb(6, 95, 212);
-        border-style: solid; 
-        border-width: 1px; 
+        border: 1px solid rgb(6, 95, 212);
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.15s, color 0.15s;
@@ -70,15 +66,15 @@
         https://supersimple.dev/exercises/buttons using Chrome DevTools */
         background-color: rgb(29, 155, 240);
         color: white;
+        font-size: 15px; 
+        font-weight: bold;
         
-        /* Homework 4f */
+        /* See Homework 4f */
         height: 36px;
         width: 74px;
 
         border: none;
         border-radius: 18px; 
-        font-size: 15px; 
-        font-weight: bold;
         cursor: pointer;
         margin-left: 8px;
         transition: box-shadow 0.15s;
@@ -88,11 +84,10 @@
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
     }
 
-    /* Remember that we can use Chrome DevTools to check the margin/border/padding/content of an element!!! */
+    /* Remember that we can use Chrome DevTools to check the margin/border/padding/content and color information of an element!!! */
 
 </style>
 
-<!-- https://supersimple.dev/exercises/buttons -->
 <button class="subscribe-button">SUBSCRIBE</button>
 <button class="join-button">JOIN</button>
 <button class="tweet-button">Tweet</button>

@@ -1,0 +1,64 @@
+<style>
+.apply-button {
+    background-color: rgb(10, 102, 194);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    
+    /* 
+    height: 40px;
+    width: 240px; 
+
+    padding-top/bottom: (40-17)/2
+    padding-left/right: (240-193)/2 
+
+    However, to simplify the question, we are not setting the exact same height and width as the previous one!
+    */
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background-color 0.15s;
+}
+
+.apply-button:hover {
+    background-color: rgb(2, 70, 138);
+}
+
+.save-button {
+    background-color: white;
+    color: rgb(10, 102, 194);
+    font-size: 15px;
+    font-weight: bold;
+    
+    /* 
+    height: 40px;
+    width: 80px; 
+
+    This button has border!
+
+    padding-top/bottom: (40-17-2)/2
+    padding-left/right: (80-35-2)/2 
+
+    However, to simplify the question, we are not setting the exact same height and width as the previous one!
+    */
+    padding: 11px 22px;
+
+    border: 1px solid rgb(10, 102, 194);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s, border-width 0.15s;
+}
+
+.save-button:hover {
+    /* background-color: rgb(226, 240, 254); */
+    background-color: rgba(10, 102, 194, 0.15);
+    border-width: 2px;
+}
+</style>
+
+<!-- LinkedIn -->
+<button class="apply-button">Apply on company website</button>
+<button class="save-button">Save</button>
