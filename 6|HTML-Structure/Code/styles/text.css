@@ -1,5 +1,5 @@
 p {
-    font-family: Arial;
+    font-family: Roboto;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -7,8 +7,8 @@ p {
 .video-title {
     font-size: 18px;
     font-weight: bold;
-    width: 280px;
     line-height: 24px;
+    width: 280px;
     margin-bottom: 5px;
 }
 
@@ -27,15 +27,15 @@ p {
 .video-description {
     color: rgb(96, 96, 96);
     font-size: 14px;
-    width: 280px;
     line-height: 22px;
+    width: 280px;
     margin-bottom: 100px;
 }
 
 .app-text {
+    background-color: rgb(227, 65, 64);
     color: white;
     font-size: 14px;
-    background-color: rgb(227, 65, 64);
     text-align: center;
     padding-top: 18px;
     padding-bottom: 18px;
@@ -43,9 +43,9 @@ p {
 
 /* Style "Shop now" inside <a> */
 .shop-link {
-    cursor: pointer;
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .shop-link:hover {
