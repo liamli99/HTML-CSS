@@ -1,23 +1,25 @@
 <style>
 p {
     font-family: Arial;
+    font-size: 18px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 .first {
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .first-at {
     color: grey;
+    /* This is necessary when first-at is inside first, this can be ignored when first and first-at are separate spans! */
     font-weight: normal;
 }
 
 .second {
-    width: 550px;
     line-height: 25px;
+    width: 600px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
@@ -30,11 +32,17 @@ p {
     freeCodeCamp.org
     <span class="first-at">@freeCodeCamp 1h</span>
 </p>
+<!-- <p>
+    <span class="first">freeCodeCamp.org</span>
+    <span class="first-at">@freeCodeCamp 1h</span>
+</p> -->
+
 <p class="second">
     As a web developer, you'll want to make your projects easy to use and navigate around.
 </p>
+
 <p>
     Here <span class="third">@chp_it</span> outlines the top skills new developers should have.
 </p>
 
-<!-- Similar to 5f, we can also use two <span>s inside <p></p> -->
+<!-- This exercise is similar to 5f! -->
