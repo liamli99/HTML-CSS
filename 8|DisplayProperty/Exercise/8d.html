@@ -1,0 +1,46 @@
+<!-- Note that here I include <!DOCTYPE> which is used in HTML5, in this case, width property represents content width for <input>! However, the solution doesn't include <!DOCTYPE>, so that width property for <input> represents content width + padding + border! -->
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        input {
+          font-size: 16px;
+          padding: 12px 16px;
+          border: 1px solid rgb(200, 200, 200);
+          border-radius: 8px;
+          margin-bottom: 12px;
+        }
+
+        .name {
+          width: 148px;
+        }
+
+        /* Remember that <input>'s width represents content width, thus the total width for the first line is: (148 + (16 + 1) * 2) * 2 + 4 = 368! The reason we plus 4 in total width is that even though there is no margin displayed in "Computed", there is actually a 4px distance between two inputs! This distance is caused by the single space between two <input>s! For formatting purpose, we normally write two inputs in separate lines, which can cause the single space between two inputs! */
+
+        .email {
+          /* Here width represents content width, since the total width for the first line is 368, the content width for the second input should be: 368 - (16 + 1) * 2 = 334! */
+          width: 334px;
+          display: block;
+        }
+
+        button {
+          background-color: rgb(47, 127, 231);
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+          /* Different from <input>, <button>'s width represents content width + padding + border! Thus width = total width = 368! */
+          width: 368px;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          border: none;
+          border-radius: 8px;
+        }
+      </style>
+    </head>
+    <body>
+      <input class="name" placeholder="First name">
+      <input class="name" placeholder="Last name">
+      <input class="email" placeholder="Email">
+      <button>Sign Up</button>
+    </body>
+  </html>
