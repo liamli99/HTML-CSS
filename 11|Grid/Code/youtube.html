@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        
         <style>
             p {
                 font-family: Roboto, Arial;
@@ -17,7 +18,7 @@
                display: block;
             }
 
-            /* Since we are using grid, we can delete video-preview because we don't need inline-block divs with fixed width and vertical align to organize the page! */
+            /* Since we are using grid, we can delete video-preview because we don't need inline-block divs with fixed width to organize the page! */
 
             /* Remember that fr can only be used in grid-template-columns, not width! */
             .video-grid {
@@ -31,22 +32,21 @@
                 margin-bottom: 12px;
             }
             .thumbnail {
-                /* We don't want the video picture to be the same size all the time, it should be flexible when we resize the window!!! */
+                /* We want the size of the thumbnail to be flexible when we resize the window! So we set the width to be 100% of the width of its container! */
                 width: 100%;
                 /* Since it taks up the whole line of its container, there is no need to include "display: block;" */
             }
 
-            /* Since we are using grid, we can delete channel-picture and video-info because we don't need two inline-block divs with fixed width and vertical align! */
+            /* Since we are using grid, we can delete channel-picture and video-info because we don't need inline-block divs with fixed width to organize the page! */
             .video-info-grid {
                 display: grid;
                 grid-template-columns: 50px 1fr;
             }
 
-            /* Note that there is no single space between picture and video info compared to Lesson10. This is because these two divs are inside the same grid container so that writing two divs in separate lines cannot cause a single space!!! If you want to set a single space, just set the picture width less than 50px instead of 100%! */
+            /* Note that there is no single space between profile picture and video info compared to Lesson 10 if we still set width = 100%. This is because two divs are inside the same grid container (video-info-grid) so that writing two divs in separate lines cannot cause a single space!!! If you still want to set some space, just set the picture width less than 50px instead of 100%! */
             .profile-picture {
-                /* width: 40px; */
-                width: 100%;
-                border-radius: 25px;
+                width: 40px;
+                border-radius: 20px;
             }
 
             .video-title {

@@ -9,10 +9,12 @@
                 margin-bottom: 0px;
             }
 
+            /* first grid to lay out three cards */
             .container {
                 display: grid;
                 grid-template-columns: 200px 200px 200px;
-                column-gap: 15px;
+                /* 15 + 4 (single space) */
+                column-gap: 19px;
             }
 
             .profile {
@@ -33,23 +35,23 @@
                 margin-bottom: 4px;
             }
 
+            /* second grid to lay out picture and friend */
             .friend-row {
                 margin-left: 8px;
                 margin-bottom: 10px;
                 display: grid;
                 grid-template-columns: 28px 1fr;
-                column-gap: 4px;
+                /* 4 + 4 (single space) */
+                column-gap: 8px;
                 /* Similar to "vertical-align: middle;" */
                 align-items: center;
             }
-
             .friend-picture {
                 height: 28px;
                 width: 28px;
                 object-fit: cover;
                 border-radius: 14px;
             }
-
             .friend {
                color: grey; 
             }
@@ -57,10 +59,10 @@
             .add {
                 background-color: rgb(24, 119, 242);
                 color: white;
+                font-size: 16px;
+                padding: 10px 20px;
                 border: none;
                 border-radius: 4px;
-                padding: 10px 20px;
-                font-size: 16px;
                 margin-left: 8px;
                 margin-bottom: 10px;
             }
@@ -72,7 +74,7 @@
                 <img class="profile-picture" src="cat.jpeg">
                 <p class="name">Oliver</p>
                 <div class="friend-row">
-                    <!-- Note that we don't have to use <div></div> inside CSS grid! If grid defines several sections and one of them only has one element, e.g. <img>, <p>, <input>, <button>, we can simply use that one element without wrapping it inside a div! <div> only help us wrap several elements into one section!!!  -->
+                    <!-- Note that we don't always have to use <div></div> inside CSS grid! If grid defines several sections and one of them only has one element, e.g. <img>, <p>, <input>, <button>, we can simply use that one element without wrapping it inside a div! <div> only helps us wrap several elements into one section!!!  -->
                     <img class="friend-picture" src="cat.jpeg">
                     <p class="friend">2 mutual friends</p>
                 </div>
