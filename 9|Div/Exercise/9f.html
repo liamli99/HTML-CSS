@@ -3,22 +3,22 @@
     <head>
         <title>9f</title>
         <style>
-            div {
-                width: 200px;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-            }
-
-            img {
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
-                margin-bottom: 12px;
-            }
-
             p {
                 font-family: Arial;
                 margin-top: 0px;
                 margin-bottom: 0px;
+            }
+
+            .profile {
+                width: 200px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            }
+
+            .profile-picture {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 12px;
             }
 
             .name {
@@ -34,24 +34,24 @@
                margin-bottom: 12px;
             }
 
-            button {
+            .add {
                 background-color: rgb(24, 119, 242);
                 color: white;
+                font-size: 16px;
+                padding: 10px 20px;
                 border: none;
                 border-radius: 4px;
-                padding: 10px 20px;
                 margin-left: 8px;
                 margin-bottom: 10px;
-                font-size: 16px;
             }
         </style>
     </head>
     <body>
-        <div>
-            <img src="cat.jpeg">
+        <div class="profile">
+            <img class="profile-picture" src="cat.jpeg">
             <p class="name">Oliver</p>
             <p class="friend">2 mutual friends</p>
-            <button>Add Friend</button>
+            <button class="add">Add Friend</button>
         </div>
     </body>
 </html>
