@@ -9,16 +9,16 @@
                 justify-content: space-between;
                 align-items: center;
                 background-color: rgb(120, 82, 178);
+                /* We can also set margin-left in left-text and margin-right in right-button! */
                 padding-left: 15px;
                 padding-right: 15px;
-
-                /* We don't have to set the header height first because this may cause some restrictions! We can set the height, padding, border, and margin of its inner element to automatically set the header height!!! */
             }
 
             .left-text {
                 font-family: Arial;
                 font-weight: bold;
                 color: white;
+                /* margin-left: 15px; */
             }
 
             .middle-input {
@@ -26,25 +26,26 @@
                 height: 30px;
                 border: none;
                 border-radius: 15px;
+                padding-left: 20px;
                 margin-top: 12px;
                 margin-bottom: 12px;
-                padding-left: 20px;
             }
 
             .right-button {
                 background-color: rgb(120, 82, 178);
                 color: white;
+                font-size: 16px;
+                padding: 8px 15px;
                 border: 1px solid white;
                 border-radius: 2px;
-                padding: 8px 15px;
-                font-size: 16px;
+                /* margin-right: 15px; */
             }
         </style>
     </head>
     <body>
         <div class="header">
-            <!-- Note that we don't have to use <div></div> inside flexbox! If flexbox container defines flex-direction: row, and one element takes up the entire column/section, then we can simply use that one element without wrapping it inside a div! <div> only help us wrap several elements into one column/section!!!  -->
             <div class="left-text">Home</div>
+            <!-- Note that item can be one element or a lot of elements. If item is one element, then we don't have to wrap this element into <div></div>, we can simply write this element as an item! If item is a lot of elements, then we should wrap these elements into <div></div> and write this div as an item!   -->
             <input class="middle-input" placeholder="Search">
             <button class="right-button">Download</button>
         </div>
