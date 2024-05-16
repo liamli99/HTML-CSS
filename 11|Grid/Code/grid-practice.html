@@ -4,6 +4,7 @@
         <title>Grid Practice</title>
     </head>
     <body>
+        <!-- Items have the same height which is the largest item's height in this line if not specified! -->
         <div style="
             display: grid; 
             grid-template-columns: 100px 100px;">
@@ -11,6 +12,17 @@
             <div style="background-color: lightpink;">100px<p>text</p></div>
         </div>
 
+        <!-- If specified, items will have that specified height; If not specified, items will have the same height as the largest item's height in this line! -->
+        <div style="
+            display: grid; 
+            grid-template-columns: 100px 100px 100px;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink; height: 100px;">100px</div>
+            <div style="background-color: lightblue; height: 200px;">100px</div>
+        </div>
+
+        <!-- Redundant items will go to a new line following the width above! -->
         <div style="
             display: grid; 
             grid-template-columns: 100px 100px 200px;
@@ -53,6 +65,134 @@
             <div style="background-color: lightpink;">1fr</div>
             <div style="background-color: lightblue; height: 200px;">1fr</div>
             <div style="background-color: lightpink;">1fr</div>
+        </div>
+
+        <!-- justify-content, horizontally -->
+        <h1>justify-content</h1>
+
+        <h2>start (default)</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            justify-content: start; /* default value */
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px</div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <h2>end</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            justify-content: end;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px</div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <h2>center</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            justify-content: center;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px</div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <h2>space-between/around/evenly</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            justify-content: space-between;
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px</div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <!-- align-items, vertically -->
+        <h1>align-items</h1>
+
+        <h2>stretch (default)</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            align-items: stretch; /* default value */
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px<div>text</div></div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <h2>start</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            align-items: start;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px<div>text</div></div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <h2>end</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            align-items: end;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px<div>text</div></div>
+            <div style="background-color: lightblue;">100px</div>
+        </div>
+
+        <h2>center</h2>
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+
+            align-items: center;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">100px</div>
+            <div style="background-color: lightpink;">100px<div>text</div></div>
+            <div style="background-color: lightblue;">100px</div>
         </div>
 
     </body>

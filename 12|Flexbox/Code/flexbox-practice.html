@@ -4,14 +4,38 @@
         <title>Flexbox Practice</title>
     </head>
     <body>
+        <!-- Items have the same height which is the largest item's height in this line if not specified! -->
+        <!-- Items take up as much width as possible! -->
         <div style="
             display: flex;
             flex-direction: row;">
-            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightblue;">div 1 more text</div>
             <div style="background-color: lightpink;">div 2<p>text</p></div>
         </div>
 
-        <!-- "flex: 1" works the same as "1 fr" in CSS grid -->
+        <!-- If specified, items will have that specified height; If not specified, items will have the same height as the largest item's height in this line! -->
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">div 1 more text</div>
+            <div style="background-color: lightpink; height: 100px;">div 2</div>
+            <div style="background-color: lightblue; height: 200px;">div 3</div>
+        </div>
+
+        <!-- Different from CSS grid, redundant items in flexbox container will not go to a new line! If taking up the whole line, new items will stay in the same line and squeeze the original items! -->
+        <div style="
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;">
+            <div style="background-color: lightblue;">div 1 more more more more text</div>
+            <div style="background-color: lightpink;">div 2 more more more more text</div>
+            <div style="background-color: lightblue;">div 3 more more more more text</div>
+            <div style="background-color: lightpink;">div 2 more more more more text</div>
+        </div>
+
+        <!-- "flex: 1" works the same as "1 fr" in CSS grid, but it is written in the item not the container! -->
+        <!-- Even though width is not pre-defined and items can take up as much width as possible, we can still set the width property in the items! -->
         <div style="
             display: flex;
             flex-direction: row;
@@ -29,12 +53,47 @@
             <div style="background-color: lightblue; flex: 2;">flex: 2</div>
         </div>
 
+        <!-- justify-content, horizontally -->
+        <h1>justify-content</h1>
+
+        <h2>start (default)</h2>
         <div style="
             display: flex;
             flex-direction: row;
+
+            justify-content: start; /* default value */
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px;">100px</div>
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+        </div>
+
+        <h2>end</h2>
+        <div style="
+            display: flex;
+            flex-direction: row;
+
+            justify-content: end;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px;">100px</div>
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+        </div>
+
+        <h2>center</h2>
+        <div style="
+            display: flex;
+            flex-direction: row;
+
             justify-content: center;
 
-            height: 70px;
+            height: 100px;
             border: 1px solid gray;
             margin-top: 30px;">
             <div style="background-color: lightblue; width: 100px;">100px</div>
@@ -42,12 +101,16 @@
             <div style="background-color: lightblue; width: 100px;">100px</div>
         </div>
 
+        <h2>space-between/around/evenly</h2>
         <div style="
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
 
-            height: 70px;
+            justify-content: space-between;
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+
+            height: 100px;
             border: 1px solid gray;
             margin-top: 30px;">
             <div style="background-color: lightblue; width: 100px;">100px</div>
@@ -55,17 +118,66 @@
             <div style="background-color: lightblue; width: 100px;">100px</div>
         </div>
 
+        <!-- align-items, vertically -->
+        <h1>align-items</h1>
+
+        <h2>stretch (default)</h2>
         <div style="
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+
+            align-items: stretch; /* default value */
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px;">100px<div>text</div></div>
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+        </div>
+
+        <h2>start</h2>
+        <div style="
+            display: flex;
+            flex-direction: row;
+
+            align-items: start;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px;">100px<div>text</div></div>
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+        </div>
+
+        <h2>end</h2>
+        <div style="
+            display: flex;
+            flex-direction: row;
+
+            align-items: end;
+
+            height: 100px;
+            border: 1px solid gray;
+            margin-top: 30px;">
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px;">100px<div>text</div></div>
+            <div style="background-color: lightblue; width: 100px;">100px</div>
+        </div>
+
+        <h2>center</h2>
+        <div style="
+            display: flex;
+            flex-direction: row;
+
             align-items: center;
 
-            height: 70px;
+            height: 100px;
             border: 1px solid gray;
             margin-top: 30px;">
             <div style="background-color: lightblue; width: 100px;">100px</div>
-            <div style="background-color: lightpink; width: 100px;">100px</div>
+            <div style="background-color: lightpink; width: 100px;">100px<div>text</div></div>
             <div style="background-color: lightblue; width: 100px;">100px</div>
         </div>
     </body>
