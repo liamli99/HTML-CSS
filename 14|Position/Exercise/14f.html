@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>14f</title>
+        <style>
+            body {
+                height: 3000px;
+            }
+
+            div {
+                font-family: Arial;
+            }
+
+            /* My solution is different from the official solution because the official solution doesn't use flexbox, instead, it sets the padding and wraps the image into div. Both solutions can achieve the same layout! */
+            .sidebar1 {
+                background-color: rgb(33, 33, 33);
+
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 70px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-picture {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+                border-radius: 25px;
+                margin-top: 10px;
+            }
+
+            .sidebar2 {
+                background-color: rgb(55, 55, 55);
+
+                position: fixed;
+                top: 0px;
+                left: 70px;
+                bottom: 0px;
+                width: 150px;
+
+                padding: 15px;
+            }
+
+            .info-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+
+            }
+
+            .info {
+                color: white;
+                font-size: 14px;
+            }
+
+            .add {
+                color: rgb(150, 150, 150);
+                font-size: 25px;
+            }
+
+            .channel {
+                color: rgb(150, 150, 150);
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="sidebar1">
+            <img class="profile-picture" src="cat.jpeg">
+            <img class="profile-picture" src="cat.jpeg">
+            <img class="profile-picture" src="cat.jpeg">
+        </div>
+        <div class="sidebar2">
+            <div class="info-row">
+                <div class="info">INFO</div>
+                <div class="add">+</div>
+            </div>
+            <div class="channel"># new-videos</div>
+            <div class="channel"># updates</div>
+            <div class="channel"># faq</div>
+        </div>
+    </body>
+</html>
