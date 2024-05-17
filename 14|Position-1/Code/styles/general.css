@@ -1,0 +1,15 @@
+body {
+    margin: 0px;
+
+    /*  Since the fixed element is removed from the normal document flow and there is no space for it in the page layout, header is removed from the page and video-grid goes up, it looks like header is covering the video-grid! We can add margin-top to the video-grid, but the best solution is to add padding-top to the body!!! */
+    padding-top: 80px;
+
+    /* The sidebar is covering the video-grid, we can add padding-left to the body! */
+    padding-left: 80px;
+}
+
+p {
+    font-family: Roboto, Arial;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
