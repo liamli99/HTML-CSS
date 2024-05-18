@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Position Practice</title>
+        <title>Position Fixed Practice</title>
     </head>
+
     <body style="
         height: 3000px; /* So that we can scroll the page */
     ">
+        <!-- The fixed element is positioned in the browser window, which means that it stays in the same place when scrolling the page! We can use `top`, `right`, `bottom`, and `left` properties to determine the final position of the fixed-position elements!  -->
+
+        <!-- If we only set one of top and bottom and one of right and left, the element will only take up as much space as possible! -->
         <div style="
             background-color: black;
             color: white;
 
             position: fixed; 
+
+            top: 0px; /* the distance between the top of the element and the top of the browser window is 0px! */
+            left: 20px; /* the distance between the left of the element and the left of the browser window is 20px */
+        ">header1</div>
+
+        <!-- If we set both top and bottom or both right and left, the element will stretch!   -->
+        <div style="
+            background-color: black;
+            color: white;
+
+            position: fixed; 
+
+            top: 30px;
+            left: 20px;
+            right: 20px;
+        ">header2</div>
+
+        <!-- When using top + bottom (left + right), the height (width) of the element will resize when resizing the window; When using height (width), the height (width) of the element will not resize when resizing the window! -->
+        <div style="
+            background-color: black;
+            color: white;
+
+            position: fixed; 
+
+            top: 60px;
+            left: 20px;
+            width: 500px;
+        ">header3</div>
+
+        <!-- Note that three headers are like covering the divs, this is because fixed elements are removed from the normal document flow, and no space is created for the elements in the page layout!!!
             
-            /* fixed when scrolling the page! the inline-block element does not take up the whole line! */
-
-            top: 0px;
-            /* bottom: 100px; */
-            left: 0px;
-            right: 0px;
-
-            height: 50px;
-
-            /* Pay attention to the use of width & height vs. top/left/bottom/right!!! Sometimes we use the combination of them! */
-        ">header</div>
-
-        <!-- The header is covering the first div, we can add margin-top to the first div, but the best solution is to add padding-top to the body!!! -->
+        To fix this issue, we can add margin-top to the first div, but the best solution is to add padding-top to the body!!! -->
 
         <div style="
             background-color: lightblue;

@@ -12,7 +12,7 @@
     right: 0px;
     height: 55px;
 
-    /* The fixed element is removed from the normal document flow and there is no space for it in the page layout, so the header is kind of transparent when we scroll down!!! We need to add a background color! */
+    /* The fixed element is removed from the normal document flow and there is no space for it in the page layout, so that header is removed and loses its background color and looks transparent!!! We need to add a background color! */
     background-color: white;
 
     /* Set the bottom border! */

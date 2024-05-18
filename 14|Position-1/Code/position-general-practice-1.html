@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Position Practice</title>
+        <title>Position General Practice 1</title>
     </head>
     <body style="
         height: 3000px; /* So that we can scroll the page */
-        padding-top: 60px; /* So that header doesn't cover the first div!!! */
+        padding-top: 60px; /* So that header doesn't cover the divs!!! */
         padding-left: 80px; /* So that sidebar doesn't cover the divs!!! */
     ">
         <div style="
@@ -14,16 +14,11 @@
 
             position: fixed; 
             
-            /* fixed when scrolling the page! the inline-block element does not take up the whole line! */
-
             top: 0px;
-            /* bottom: 100px; */
             left: 0px;
             right: 0px;
 
             height: 50px;
-
-            /* Pay attention to the use of width & height vs. top/left/bottom/right!!! Sometimes we use the combination of them! */
         ">header</div>
 
         <!-- The header is covering the first div, we can add margin-top to the first div, but the best solution is to add padding-top to the body!!! -->
