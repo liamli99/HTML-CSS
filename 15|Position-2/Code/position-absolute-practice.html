@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position Absolute Practice</title>
+    </head>
+
+    <body style="
+        height: 3000px; /* So that we can scroll the page */
+    ">
+        <!-- The absolute element is on the page, which means it moves when scrolling the page! We can use `top`, `right`, `bottom`, and `left` properties to determine the final position of the absolute-position elements!  -->
+
+        <!-- If we only set one of top and bottom and one of right and left, the element will only take up as much space as possible! -->
+        <div style="
+            background-color: black;
+            color: white;
+
+            position: absolute; 
+
+            top: 0px; /* the distance between the top of the element and the top of the page is 0px! */
+            left: 20px; /* the distance between the left of the element and the left of the page is 20px */
+        ">header1</div>
+
+        <!-- If we set both top and bottom or both right and left, the element will stretch!   -->
+        <div style="
+            background-color: black;
+            color: white;
+
+            position: absolute; 
+
+            top: 30px;
+            left: 20px;
+            right: 20px;
+        ">header2</div>
+
+        <!-- When using top + bottom (left + right), the height (width) of the element will resize when resizing the window; When using height (width), the height (width) of the element will not resize when resizing the window! -->
+        <div style="
+            background-color: black;
+            color: white;
+
+            position: absolute; 
+
+            top: 60px;
+            left: 20px;
+            width: 500px;
+        ">header3</div>
+
+        <!-- Note that three headers are like covering the divs, this is because absolute elements are removed from the normal document flow, and no space is created for the elements in the page layout!!!
+            
+        To fix this issue, we can add margin-top to the first div, but the best solution is to add padding-top to the body!!! -->
+
+        <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+        ">div 1</div>
+        
+        <!-- absolute inside relative -->
+        <div style="
+            background-color: lightpink;
+            height: 200px;
+            width: 200px;
+
+            position: relative;
+        ">
+            <div style="
+                background-color: red;
+                color: white;
+                
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+            ">123</div>
+        </div>
+        
+        <!-- absolute inside fixed -->
+        <div style="
+            background-color: black;
+            color: white;
+
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            height: 50px;
+        ">
+            <div style="
+                background-color: red;
+                color: white;
+                
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+            ">123</div>
+        </div>
+    </body>
+</html>

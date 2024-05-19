@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Position Practice</title>
+        <title>Position General Practice 2</title>
     </head>
     <body style="
         height: 3000px; 
@@ -19,6 +19,7 @@
             height: 50px;
         ">header</div>
 
+        <!-- absolute inside fixed -->
         <div style="
             background-color: green;
             color: white;
@@ -28,9 +29,27 @@
             left: 0px;
             bottom: 0px;
             width: 72px;
-        ">sidebar</div>
+        ">sidebar
+            <div style="
+            background-color: red;
+            color: white;
 
+            position: absolute;
+
+            top: 0px;
+            right: 0px;
+            ">X</div>
+        </div>
+
+        <!-- absolute inside relative -->
         <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+
+            position: relative;
+        ">div 1
+            <div style="
             background-color: red;
             color: white;
 
@@ -38,16 +57,9 @@
 
             left: 10px;
             right: 10px;
-            top: 0px;
-        ">absolute example</div>
-
-        <div style="
-            background-color: lightblue;
-            height: 200px;
-            width: 200px;
-
-            position: static; /* default value */
-        ">div 1</div>
+            bottom: 10px;
+            ">X</div>
+        </div>
         
         <div style="
             background-color: lightpink;

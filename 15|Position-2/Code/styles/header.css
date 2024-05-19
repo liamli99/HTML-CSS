@@ -3,19 +3,22 @@
     flex-direction: row;
     justify-content: space-between;
 
-    /* The header stays in the same place when the page is scrolled! */
     position: fixed;
-    
-    /* The header has 0px with top/left/right of the browser window, we don't set bottom because it has a fixed height! */
     top: 0px;
     left: 0px;
     right: 0px;
     height: 55px;
 
-    /* The fixed element is removed from the normal document flow and there is no space for it in the page layout, so the header is kind of transparent when we scroll down!!! We need to add a background color! */
-    background-color: white;
+    /* 
+    Before setting the position of thumbnail-row to be relative, all the elements except header are static, so they all appear at the back of the header! 
+    
+    However, after setting the position of thumbnail-row to be relative, thumbnail-row has the same z-index value as header (they both have the default value: 0), but since it is written later in the code, thumbnail-row will appear in front! 
+    
+    We should set the z-index of header to be a very large number so that it always appears in font of other elements!!! 
+    */
+    z-index: 100;
 
-    /* Set the bottom border! */
+    background-color: white;
     border-bottom: 1px solid rgb(228, 228, 228);
 }
 
@@ -102,8 +105,30 @@
 .youtube-apps-icon {
     height: 24px;
 }
+/* 
+Similar to video-time, notifications-count is positioned relative to the notifications-icon, but since notifications-icon is an image which is not a container, we can choose right-section as the container. However, since there are so many elements inside the right-section, a better solution is to create a new div: notifications-icon-container to wrap the notifications-icon and notifications-count. Then we should make notifications-icon-container "relative" and notifications-count "absolute"! 
+
+By doing this, top/right/bottom/left set the distance between notifications-count and notifications-icon-container! Since notifications-icon-container is inside flexbox, notifications-icon-container takes up the same space as notifications-icon! So that setting the distance between notifications-count and notifications-icon-container is actually the same as setting the distance between notifications-count and notifications-icon!!!
+
+*/
+.notifications-icon-container {
+    position: relative;
+}
 .notifications-icon {
     height: 24px;
+}
+.notifications-count {
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 9px;
+    
+    position: absolute;
+    /* Negative values can make the absolute element beyond the edge of the relative element!!! */
+    top: -2px;
+    right: -5px;
 }
 .current-user-picture {
     height: 32px;

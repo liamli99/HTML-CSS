@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Z-index Practice</title>
+    </head>
+
+    <body>
+        <!-- Elements with a higher z-index appear in front of elements with a lower z-index -->
+        
+        <!-- <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+
+            position: fixed;
+            z-index: 1;
+        ">div 1</div>
+        
+        <div style="
+            background-color: lightpink;
+            height: 200px;
+            width: 200px;
+
+            position: fixed;
+            /* The default z-index is 0 */
+        ">div 2</div> -->
+        
+        <!-- Elements with `position: static` always appear at the back -->
+        
+        <!-- <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+
+            position: fixed;
+        ">div 1</div>
+        
+        <div style="
+            background-color: lightpink;
+            height: 200px;
+            width: 200px;
+
+            position: static;
+            /* z-index has no effect! */
+        ">div 2</div> -->
+        
+        <!-- If the z-index is equal or both elements are `position: static`, the element that was written later in the code will appear in front! -->
+        
+        <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+
+            position: fixed;
+            z-index: 1;
+        ">div 1</div>
+        
+        <div style="
+            background-color: lightpink;
+            height: 200px;
+            width: 200px;
+
+            position: fixed;
+            z-index: 1;
+        ">div 2</div>
+    </body>
+</html>

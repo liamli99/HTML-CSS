@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position Relative Practice</title>
+    </head>
+
+    <body style="
+        height: 3000px; /* So that we can scroll the page */
+    ">
+        <!-- Relative element is almost the same as static element, they both display normal!!! -->
+
+        <!-- However, top, right, bottom, and left properties will cause the relative-positioned element to be pushed away from its original position, but unlike margin, other elements are not affected!!! -->
+        <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+
+            position: relative;
+            top: 10px;
+            left: 10px;
+        ">div 1</div>
+        
+        <div style="
+            background-color: lightpink;
+            height: 200px;
+            width: 200px;
+
+            margin-top: 50px;
+        ">div 2</div>
+    </body>
+</html>
