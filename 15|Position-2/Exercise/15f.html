@@ -2,22 +2,24 @@
 <html>
     <head>
         <title>15f</title>
-    </head>
-    <body style="
-        height: 3000px;
-    ">  
-        <div style="
-            display: inline-block;
+        <style>
+            body {
+                height: 3000px;
+            }
 
-            position: relative;
-        ">
-            <img style="
-            height: 300px;
-            width: 300px;
-            object-fit: cover;
-        " src="shirt.jpg">
+            .product-container {
+                position: relative;
 
-            <div style="
+                display: inline-block;
+            }
+
+            .product-image {
+                height: 300px;
+                width: 300px;
+                object-fit: cover;
+            }
+
+            .discount {
                 background-color: black;
                 color: white;
                 font-family: Arial;
@@ -26,13 +28,14 @@
                 position: absolute;
                 right: 0px;
                 top: 10px;
-            ">20% OFF</div>
+            }
 
-            <div style="
+            /* Similar to discount, bottom-overlay is also an absolute element that is positioned rlative to the product-container (image) */
+            .bottom-overlay {
                 background-color: rgba(255, 255, 255, 0.8);
 
                 display: flex;
-                justify-self: center;
+                justify-content: center;
                 align-items: center;
 
                 position: absolute;
@@ -40,12 +43,21 @@
                 right: 0px;
                 bottom: 0px;
                 height: 80px;
-            ">
-                <button style="
-                    background-color: white;
-                    border: 1px solid black;
-                    padding: 10px 15px;
-                ">Add to cart</button>
+            }
+
+            .add {
+                background-color: white;
+                border: 1px solid black;
+                padding: 10px 15px;
+            }
+        </style>
+    </head>
+    <body>  
+        <div class="product-container">
+            <img class="product-image" src="shirt.jpg">
+            <div class="discount">20% OFF</div>
+            <div class="bottom-overlay">
+                <button class="add">Add to cart</button>
             </div>
         </div>
     </body>

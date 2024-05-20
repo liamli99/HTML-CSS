@@ -2,29 +2,29 @@
 <html>
     <head>
         <title>15e</title>
-    </head>
-    <body style="
-        height: 3000px;
-    ">  
-        <!-- Same as Youtube project and different from 15d, here image is not a container! So that we need to create a new div to wrap the image and discount! The div container is relative and the discount is absolute! -->
+        <style>
+            body {
+                height: 3000px;
+            }
 
-        <!-- 
-        By doing this, top/right/bottom/left set the distance between discount and div container! However, different from Youtube project, div container is not inside flexbox or grid, so that it doesn't take up the same space as the image, it actually takes up as much width as possible because the default div is block!!! So that the distance between discount and div container is different from the distance between discount and image!!! Our purpose is to set the distance between discount and image!
-        
-        Thus we should add display: inline-block to the div container!!! By doing this, the div container takes up the same space as the image!!!
-        -->
-        <div style="
-            display: inline-block;
+            .product-container {
+                /* Same as Youtube project and different from 15d, here image is not a container! So that we need to create a new div to wrap the image and discount! The div container is relative and the discount is absolute! */
+                position: relative;
 
-            position: relative;
-        ">
-            <img style="
-            height: 300px;
-            width: 300px;
-            object-fit: cover;
-        " src="shirt.jpg">
 
-            <div style="
+                /* By doing this, top/right/bottom/left set the distance between discount and div container! However, different from Youtube project, div container is not inside flexbox or grid, so that it doesn't take up the same space as the image, it actually takes up as much width as possible because the default div is block!!! So that the distance between discount and div container is different from the distance between discount and image!!! Our purpose is to set the distance between discount and image!
+                
+                Thus we should add display: inline-block to the div container!!! By doing this, the div container takes up the same space as the image!!! */
+                display: inline-block;
+            }
+
+            .product-image {
+                height: 300px;
+                width: 300px;
+                object-fit: cover;
+            }
+
+            .discount {
                 background-color: black;
                 color: white;
                 font-family: Arial;
@@ -33,7 +33,13 @@
                 position: absolute;
                 right: 0px;
                 top: 10px;
-            ">20% OFF</div>
+            }
+        </style>
+    </head>
+    <body>  
+        <div class="product-container">
+            <img class="product-image" src="shirt.jpg">
+            <div class="discount">20% OFF</div>
         </div>
     </body>
 </html>
