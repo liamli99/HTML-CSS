@@ -1,0 +1,194 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 55px;
+
+    z-index: 100;
+
+    background-color: white;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    height: 20px;
+}
+
+
+.middle-section {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 70px;
+    margin-right: 35px; 
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-bar {
+    font-size: 16px;
+    height: 36px;
+    flex: 1;
+    padding-left: 10px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+
+    width: 0px;
+}
+
+.search-bar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: rgb(240, 240, 240);
+    height: 40px;
+    width: 66px;
+    border: 1px solid rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-search-button {
+    background-color: rgb(245, 245, 245);
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+
+.right-section {
+    width: 180px;
+    margin-right: 20px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    /* flex-shrink: 0; */
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.youtube-apps-icon {
+    height: 24px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notifications-icon {
+    height: 24px;
+}
+
+.notifications-count {
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 9px;
+    
+    position: absolute;
+    top: -2px;
+    right: -5px;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 16px;
+}
+
+
+/* Tooltip */
+
+/* Target multiple class selectors */
+/* Step 1 */
+.search-button,
+.voice-search-button,
+.upload-icon-container {
+    /* We use "absolute inside relative" to implement tooltip! Tooltip should be positioned relative to the icon, but since icon is an image which is not a container, we can create a new div container to wrap icon and tooltip! Luckily, search-icon and voice-search icon already have container which is the button! */
+    position: relative;
+
+    /* 
+    Note that both icon and tooltip are inside button, however, icon will still be centered horizontally and vertically inside the button!!! This is because tooltip is absolute so that it is removed from the normal document flow, thus it will not affect icon!!! 
+    
+    Since tooltip is absolute and button is relative, tooltip will be positioned relative to the button! However, since bottom is set for tooltip, tooltip will not be centered vertically! Since left and right are not set for tooltip, tooltip will be centered horizontally!
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Target elements with class = tooltip that are inside elements with class = xxx-button!!! */
+/* Step 2 */
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip {
+    background-color: gray;
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 2px;
+    
+    position: absolute;
+    bottom: -30px;
+
+    /* The tooltip should be invisible when not hovering on the button! */
+    opacity: 0;
+    transition: opacity 0.15s;
+
+    /* 
+    Based on the HTML code, the button is composed of icon and tooltip, we actually want the tooltip to be visible when hovering on the icon not the tooltip!!! 
+
+    So that we can add pointer-events: none to disable all interactions with the mouse (e.g. clicks and hovers), thus hovering on tooltip cannot make tooltip visible!!!
+    */
+    pointer-events: none;
+
+    /* Prevent the text inside the element (tooltip) from wrapping to multiple lines! */
+    white-space: nowrap;  
+}
+
+/* Target elements with class = tooltip that are inside elements with class = xxx-button when hovering on the xxx-button!!! */
+/* Step 3 */
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip {
+    /* The tooltip should be visible when hovering on the button! */
+    opacity: 1;
+}
