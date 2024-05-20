@@ -1,0 +1,79 @@
+.video-grid {
+    display: grid;
+    /* I think this is unnecessary */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/* Only apply the CSS style below when the screen width is between 0px to 750px! */
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Only apply the CSS style below when the screen width is between 750px to 1000px! */
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Only apply the CSS style below when the screen width is over 1000px! */
+@media (min-width: 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+
+    position: relative;
+}
+.thumbnail {
+    width: 100%;
+}
+.video-time {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: 500px; 
+    padding: 4px;
+    border-radius: 2px;
+
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+    width: 36px;
+    border-radius: 18px;
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+/* Remove the underline of the hyperlink and make the text color black! */
+.video-title-link {
+    text-decoration: none;
+    color: black;
+}
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+.video-author {
+    margin-bottom: 4px;
+}

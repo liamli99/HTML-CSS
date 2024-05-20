@@ -1,0 +1,47 @@
+.sidebar {
+    position: fixed;
+    
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+
+    /* The top border of the sidebar should be invisible, since sidebar is positioned below the header, we can make the sidebar appear in front of header to cover that border!!! */
+    z-index: 200;
+
+    /* We cannot set top: 60px because otherwise sidebar cannot cover the top border! */
+    padding-top: 5px;
+
+    background-color: white;
+
+    /* This is different from the solution because I want the sidebar to resize when resizing the window!!! */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sidebar-link {
+    height: 74px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(235, 235, 235);
+    /* cursor: pointer; */
+}
+
+/* Target image elements that are inside elements with class = sidebar-link!!! */
+.sidebar-link img {
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+/* Target div elements that are inside elements with class = sidebar-link!!! */
+.sidebar-link div {
+    font-size: 10px;
+}
