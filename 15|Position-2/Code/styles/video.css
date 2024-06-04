@@ -8,6 +8,8 @@
 /* 
 video-time is positioned relative to the thumbnail, but since thumbnail is an image which is not a container, we should choose thumbnail-row as the container and make it "relative"! Then video-time should be made "absolute"! 
 
+Note that since video-time is absolute, it is removed from the normal document flow, so that it will not affect thumbnail!!! 
+
 By doing this, top/right/bottom/left set the distance between video-time and thumbnail-row! Since thumbnail-row is inside grid, thumbnail-row takes up the same space as thumbnail! So that setting the distance between video-time and thumbnail-row is actually the same as setting the distance between video-time and thumbnail!!!
 */
 .thumbnail-row {

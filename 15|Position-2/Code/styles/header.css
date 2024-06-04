@@ -108,6 +108,8 @@
 /* 
 Similar to video-time, notifications-count is positioned relative to the notifications-icon, but since notifications-icon is an image which is not a container, we can choose right-section as the container. However, since there are so many elements inside the right-section, a better solution is to create a new div: notifications-icon-container to wrap the notifications-icon and notifications-count. Then we should make notifications-icon-container "relative" and notifications-count "absolute"! 
 
+Note that since notifications-count is absolute, it is removed from the normal document flow, so that it will not affect notifications-icon!!!
+
 By doing this, top/right/bottom/left set the distance between notifications-count and notifications-icon-container! Since notifications-icon-container is inside flexbox, notifications-icon-container takes up the same space as notifications-icon! So that setting the distance between notifications-count and notifications-icon-container is actually the same as setting the distance between notifications-count and notifications-icon!!!
 
 */
